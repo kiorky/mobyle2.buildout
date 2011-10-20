@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd $(dirname $0)/..
 PROJECT="mobyle2"
-IMPORT_URL="https://subversion.makina-corpus.net/scrumpy/mobyle2"
+IMPORT_URL="ssh://git@github.com/mobyle2/mobyle2.buildout.git"
 cd $(dirname $0)/..
 [[ ! -d t ]] && mkdir t
 rm -rf t/*
@@ -32,7 +32,7 @@ for i in $core;do
 done
 EGGS_IMPORT_URL="$IMPORT_URL/eggs"
 sed -re "/\[sources\]/{
-        a $PROJECT.core =  svn $EGGS_IMPORT_URL/$PROJECT.core/trunk
+a $PROJECT.core =  git git@github.com:mobyle2/mobyle2.core.git
 }" -i  etc/project/sources.cfg
 sed -re "s:(src/)?$PROJECT\.((skin)|(tma)|(core)|(testing))::g" -i etc/project/$PROJECT.cfg
 sed -re "/auto-checkout \+=/{
@@ -44,9 +44,7 @@ sed -re "/eggs \+=.*buildout:eggs/{
 
 
 sed -re "/use=egg:..instance:ep./{
-        a \ 
         a \sqlalchemy.url = \${db:scheme}://\${db:user}:\${db:password}@\${db:host}:\${db:port}/\${db:name}
-        a \   
 }"  -i etc/templates/wsgi/paster.ini.in
 cat << EOF >> etc/sys/settings.cfg
 
@@ -91,5 +89,5 @@ a\     *www.tummy.com*
 a\     *www.riverbankcomputing.com*
 a\     *.selenic.com*
 }" -i etc/sys/settings.cfg
-sed  -re "s/dependencies=/dependencies=git-1.7 subversion-1.6 /g" -i minilays/*/*
+sed  -re "s/dependencies=/dependencies=git-1.7 /g" -i minilays/*/*
 # vim:set et sts=4 ts=4 tw=0:

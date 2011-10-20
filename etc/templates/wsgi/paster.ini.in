@@ -34,9 +34,7 @@ use=egg:WebError#evalerror
 
 [app:projectapp]
 use=egg:${instance:ep}
- 
 sqlalchemy.url = ${db:scheme}://${db:user}:${db:password}@${db:host}:${db:port}/${db:name}
-   
 zcmls=
 # indicate here full path to zcmls or
 # relative path inside your egg
@@ -52,13 +50,13 @@ pyramid.includes=
 
 # various addons pre configurations
 mako.directories=${instance:egg}:templates
-pyramid.debug_all=\{instance:debug} 
-pyramid.debug_routematch=${instance:debug} 
-pyramid.debug_templates=${instance:debug} 
-pyramid.reload_all=${instance:debug} 
-pyramid.reload_assets=${instance:debug} 
-pyramid.reload_resources=${instance:debug} 
-pyramid.reload_templates=${instance:debug}  
+pyramid.debug_all=${instance:debug}
+pyramid.debug_routematch=${instance:debug}
+pyramid.debug_templates=${instance:debug}
+pyramid.reload_all=${instance:debug}
+pyramid.reload_assets=${instance:debug}
+pyramid.reload_resources=${instance:debug}
+pyramid.reload_templates=${instance:debug}
 
 #debug toolbar
 debugtoolbar.intercept_exc=${instance:intercept_exc_debug}

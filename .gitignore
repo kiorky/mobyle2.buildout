@@ -1,5 +1,6 @@
 parts
 .installed.cfg
+minilays
 .minitage/
 .mr.developer.cfg
 bin/
