@@ -1,0 +1,15 @@
+parts
+.installed.cfg
+.minitage/
+.mr.developer.cfg
+bin/
+develop-eggs/
+etc/apache/100-mobyle2.reverseproxy.conf
+etc/hudson/mobyle2/build/activate_env.sh
+etc/hudson/mobyle2/config.xml
+etc/init.d/
+etc/mobyle2.env
+etc/wsgi/
+src.mrdeveloper/
+sys/
+tags.python
