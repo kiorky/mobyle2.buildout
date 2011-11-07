@@ -8,12 +8,22 @@ use=egg:Paste#urlmap
 /media/=pmedia
 /=pmain
 /threads/=watch_threads
+/velruse = velruse
+/apex/static = apexapp
 
 [pipeline:pmain]
-pipeline= fvhm exc translogger projectapp
+pipeline= fvhm exc translogger retry tm projectapp
 
 [pipeline:pmedia]
 pipeline= fvhm translogger exc staticapp
+
+[filter:retry]
+use = egg:repoze.retry#retry
+tries = 2
+# retryable = mypackage.exceptions:SomeRetryableException
+
+[filter:tm]
+use = egg:repoze.tm2#tm
 
 [app:watch_threads]
 use=egg:Paste#watch_threads
@@ -32,12 +42,42 @@ use=egg:Paste#printdebug
 [filter:exc]
 use=egg:WebError#evalerror
 
+[app:velruse]
+use = egg:velruse
+config_file = ${buildout:directory}/etc/wsgi/auth.yaml
+beaker.session.data_dir = ${buildout:directory}/var/tmp/velruse/sdata
+beaker.session.lock_dir = ${buildout:directory}/var/tmp/velruse/slock
+beaker.session.key = velruse
+beaker.session.secret = supersecretformobyle2
+beaker.session.type = cookie
+beaker.session.validate_key = STRONG_KEY_HERE_FOR_MOBYLE2
+beaker.session.cookie_domain = .mobyle2.org
+
 [app:projectapp]
 use=egg:${instance:ep}
 sqlalchemy.url = ${db:scheme}://${db:user}:${db:password}@${db:host}:${db:port}/${db:name}
+sqlalchemy.echo = ${instance:debug}
+sqlalchemy.echo_pool = ${instance:debug}
+available_languages = fr en
+sqlalchemy.pool_recycle = 10
 zcmls=
 # indicate here full path to zcmls or
 # relative path inside your egg
+
+
+# beaker
+session.type = file
+session.data_dir = ${buildout:directory}/var/tmp/sessions/data
+session.lock_dir = ${buildout:directory}/var/tmp/sessions/lock
+session.key = mykey
+session.secret = mysecret
+session.cookie_on_exception = true
+
+# apex configuration
+# recaptacha use localhost as defaualt domain
+# TODO: generate config with the key pair inside the website
+apex.recaptcha_public_key = 6LdxtMkSAAAAAJulw1X4oD7U8zuh9NA9pzrIKAxu
+apex.recaptcha_private_key = 6LdxtMkSAAAAAOZcYEvcCaOrBMwJKqqV5hf4gigZ
 
 
 pyramid.includes=
@@ -45,6 +85,10 @@ pyramid.includes=
     pyramid_extdirect
 #with_pyramid_zcml
     pyramid_zcml
+# formalchemy
+    pyramid_formalchemy
+    fa.jquery
+
 #with_pyramid_debugtoolbar
     pyramid_debugtoolbar
 
@@ -63,10 +107,10 @@ debugtoolbar.intercept_exc=${instance:intercept_exc_debug}
 debugtoolbar.eval_exc=${instance:debug}
 debugtoolbar.enabled=${instance:debug}
 
-
-
-
-
+[app:apexapp]
+use = egg:Paste#pkg_resources
+egg=apex
+resource_name=static/
 
 [app:staticapp]
 use = egg:Paste#pkg_resources
@@ -141,7 +185,7 @@ format = %(asctime)s %(name)s[%(levelname)s] %(message)s
 format = %(message)s
 
 [server:main]
-use=egg:Paste#http
+use = ${instance:http}
 host=${host}
 port=${port}
 

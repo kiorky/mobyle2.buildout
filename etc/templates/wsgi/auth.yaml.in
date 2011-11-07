@@ -1,0 +1,5 @@
+Store:
+
+    Type: SQL
+    DB: ${db:scheme}://${db:user}:${db:password}@${db:host}:${db:port}/${db:name}
+
