@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>mobyle2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">mobyle2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Generic Portal Pyramid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=project</td>
+	<td>mobyle2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=scm_type</td>
+	<td>git</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=uri</td>
+	<td>ssh://git@github.com/mobyle2/mobyle2.buildout.git</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=author</td>
+	<td>Mathieu Le Marec- Pasquet</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=author_email</td>
+	<td>mpa &lt;mpa@makina-corpus.com&gt;</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=license</td>
+	<td>GPL</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=supervisor_port</td>
+	<td>9090</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=http_port</td>
+	<td>9091</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_egg_pylint</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_binding_ldap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_binding_json</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_pyramid-openid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_pyramid_zcml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_pyramid_extdirect</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_pyramid_xmlrpc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_pyramid_debugtoolbar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_pyramid_who</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_cgwbDownload</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

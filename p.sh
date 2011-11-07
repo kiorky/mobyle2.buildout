@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 cd $(dirname $0)
-ps -axo pid,cmd,start_time,state|egrep "T$"|grep "bash ./l.sh"|grep -v grep|awk '{print $1}'|xargs kill -9
+ps -axo pid,cmd,start_time,state|egrep "T$"|grep "bash ./p.sh"|grep -v grep|awk '{print $1}'|xargs kill -9
 while true;do
      ps aux|grep bin/gunicorn_paster|awk '{print $2}'|xargs kill -9
      ps aux|grep bin/paster|awk '{print $2}'|xargs kill -9
      reset
-     bin/gunicorn_paster -w1 etc/wsgi/instance.ini
+     bin/paster serve --reload etc/wsgi/instance.ini
      #./bin/paster serve --reload etc/wsgi/instance.ini
      #./bin/paster serve etc/wsgi/instance.ini
      echo;echo;echo
