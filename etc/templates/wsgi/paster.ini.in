@@ -95,6 +95,8 @@ pyramid.includes=
 # various addons pre configurations
 mako.directories=${instance:egg}:templates
 pyramid.debug_all=${instance:debug}
+pyramid.debug_authorization =${instance:debug} 
+pyramid.debug_notfound= ${instance:debug} 
 pyramid.debug_routematch=${instance:debug}
 pyramid.debug_templates=${instance:debug}
 pyramid.reload_all=${instance:debug}
