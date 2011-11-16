@@ -1,0 +1,260 @@
+cd minitage/
+df -h
+export prefix=$HOME/minitage
+export python=$prefux/tools/python
+export python=$prefix/tools/python
+mkdir -p $python
+cd $python
+wget --no-check-certificate https://github.com/minitage/minitage.shell/raw/master/PyBootstrapper.sh
+bash ./PyBootstrapper.sh $pythona
+alsamixer 
+%
+cd
+cd minitage/
+ls
+./tools/python/bin/virtualenv --no-site-packages --distribute ~/minitage/
+. bin/activate
+minimerge -av python-2.6 git-1.
+minimerge -av python-2.6 git-1.7
+. bin/activate
+easy_install -U mintage.core
+easy_install -U minitage.core
+minimerge -s
+minimerge -av python-2.6 git-1.7
+minimerge -av postgresql-9.
+minimerge -av postgresql-8.4
+alsamixer 
+. bin/activatel
+minimerge -av postgresql-8.4
+rm -rf dependencies/postgresql-8.4/
+minimerge -av postgresql-8.4
+ls minilays/dependencies/
+minimerge -av libgif-4.1 
+ls -l
+cd minilays/
+deactivate 
+cd
+cd minitage/
+. bin/activate
+which python
+minimerge --help
+cd minilays/
+ls -l
+ls eggs/
+../dependencies/git-1.7/parts/part/bin/git clone https://kiorky@github.com/mobyle2/mobyle2.minilay.git
+../dependencies/git-1.7/parts/part/bin/git clone https://github.com/mobyle2/mobyle2.minilay.git
+git clone https://kiorky@github.com/mobyle2/mobyle2.minilay.git a
+git clone https://github.com/mobyle2/mobyle2.minilay.git a
+rm -rf a
+../dependencies/git-1.7/parts/part/bin/git clone https://github.com/mobyle2/mobyle2.minilay.git
+ls mobyle2.minilay/
+cat mobyle2.minilay/mobyle2-prod 
+ls ..
+cat dependencies/bzip2-1.0 
+ls ~/minitage/dependencies/bzip2-1.0/
+ls ~/minitage/dependencies/bzip2-1.0/parts/part/
+cat  ~/minitage/dependencies/bzip2-1.0/buildout.cfg 
+vim  ~/minitage/dependencies/bzip2-1.0/buildout.cfg 
+ls ~/minitage/dependencies/bzip2-1.0/
+ls ~/minitage/dependencies/bzip2-1.0/parts/part/
+ls -l
+cat ../dependencies/python-2.6/sys/share/minitage/minitage.env 
+vim  ../dependencies/python-2.6/sys/share/minitage/minitage.env 
+ls -l
+#minimerge -av mobyle2
+ls mobyle2.minilay/
+minimerge -av mobyle2
+minimerge -eav mobyle2
+minimerge -Eav mobyle2
+minimerge -av mobyle2
+minimerge -NFav mobyle2
+cat ~/.ssh/id_rsa.pub 
+minimerge -NFav mobyle2
+minimerge -av mobyle2
+cd ../pyramid/mobyle2/
+ls
+ls -l
+la
+minimerge -av mobyle2
+ls -l
+minimerge -av mobyle2
+vim etc/project/versions.cfg 
+minimerge -av mobyle2
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-dev.cfg 
+vim etc/sys/settings.cfg 
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-dev.cfg 
+vim etc/base.cfg 
+git pull
+vim etc/base.cfg 
+vim etc/project/mobyle2-kgs.cfg 
+git st
+git status
+vim /home/hmenager/.gitconfig 
+git st
+vim etc/project/mobyle2-kgs.cfg
+git st
+git checkout etc/project/versions.cfg
+vim etc/project/versions.cfg
+git commit -am "unpin paste"
+vim /home/hmenager/.gitconfig 
+git st
+git diff
+git reset HEAD^
+git commit -am "unpin paste"
+git log
+git push
+git pull
+vim etc/project/mobyle2-kgs.cfg
+git log
+git diff fa2f051cf299d438ed1419ca166363452e7656f0
+git st
+git add etc/project/mobyle2-kgs.cfg
+git diff i18n.sh
+git diff etc/templates/wsgi/paster.ini.in
+git diff etc/project/sources.cfg
+git commit -am "unpin paste, part2"
+git push
+vim etc/project/mobyle2-kgs.cfg
+ls ../../lib/python2.6/site-packages/
+vim etc/project/mobyle2-kgs.cfg
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-dev.cfg 
+grep http src.mrdeveloper/*/.gitconfig
+grep http src.mrdeveloper/*/.git/config
+sed -re "s/http/https/g"  src.mrdeveloper/*/.git/config
+sed -re "s/http/https/g"  -i src.mrdeveloper/*/.git/config
+grep http src.mrdeveloper/*/.git/config
+rm -rf src.mrdeveloper/apex/
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-dev.cfg 
+vim etc/sys/settings.cfg 
+git pull
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-dev.cfg 
+ls -l
+vim bin/paster 
+vim etc/project/sources.cfg 
+./bin/develop --help
+./bin/develop up -v
+ls -l
+vim etc/base.cfg 
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-dev.cfg  install  omelette
+ls -l parts/omelette/
+git commit -am "fix omelette"
+vim etc/base.cfg 
+~/minitage/bin/paster create  --list-templates
+pushd ~/minitage/lib/python2.6/site-packages/minitage.paste-1.3.1856-py2.6.egg/
+ls
+cd minitage/paste/
+ls
+cd instances/postgresql/
+ls
+vim __init__.py
+ls -l
+cd template/
+ls -l
+vim bin/+db_name+.dropuser_tmpl
+cd ../../
+ls
+cd ../projects/
+ls
+ls -l
+~/minitage/bin/paster create  --list-templates
+~/minitage/bin/paster create  -t minitage.instances.postgresql mobyle2
+cd 
+cd minitage/pyramid/mobyle2/
+. sys/share/minitage/minitage.env 
+echo $PATH
+echo $LD_LIBRARY_PATH
+echo $CFLAGS
+echo $LDFLAGS
+ldd ../../dependencies/subversion-1.6/parts/part/bin/svn
+echo $LDFLAGS
+ls -l
+which paster
+mobyle2.psql 
+./sys/etc/init.d/mobyle2_postgresql.mobyle2 start
+mobyle2.psql 
+./bin/paster serve etc/wsgi/instance.ini 
+ls
+ls -l bin
+history | grep buildout
+bin/buildout -Nc minitage.buildout-dev.cfg  install  omelette
+bin/buildout -Nc minitage.buildout-dev.cfg
+history | grep mini
+history >history.formation
+ls -l
+grep mini history.formation 
+vim ../../minilays/mobyle2.minilay/mobyle2
+grep mini history.formation 
+minimerge -av mobyle2
+vim ../../minilays/mobyle2.minilay/mobyle2
+minimerge -av mobyle2
+minimerge -NEmobyle2
+minimerge -NE mobyle2
+which gdal
+grep mini history.formation 
+vim sys/share/minitage/minitage.env 
+mdeactivate 
+history > history.formation 
+ls -l
+vim etc/base.cfg 
+vim etc/sys/settings-prod.cfg 
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-prod.cfg 
+grep -r chown etc/
+vim buildout-prod.cfg 
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-prod.cfg 
+vim buildout-prod.cfg 
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-prod.cfg 
+ls -l
+ls -l bin/
+pushd /etc/init.d/
+#ln -s /home/hmenager/minitage/pyramid/mobyle2/etc/init.d/supervisor.initd mobyle2
+vim /home/hmenager/minitage/pyramid/mobyle2/etc/init.d/supervisor.initd
+ls -l
+cd /etc/logrotate.d/
+ls -l
+cat /home/hmenager/minitage/pyramid/mobyle2/etc/logrotate.conf 
+podp
+oiopopd
+popd
+./bin/supervisord
+cat etc/init.d/supervisor.initd 
+./bin/supervisorctl 
+./bin/supervisorctl restart  instance1 
+netstat -pnlt
+vim etc/sys/settings.cfg 
+vim etc/sys/settings-prod.cfg 
+bin/buildout -vvvvvvvvvvvNc minitage.buildout-dev.cfg 
+git commit -am "change prod priorities"
+git push
+ls sys/share/minitage/minitage.env 
+#source s
+mdeac
+deactivate 
+source sys/share/minitage/minitage.env
+which python
+ls -l bin/
+./bin/supervisorctl shutdown
+rm bin/supervisor*
+ls -l bin/
+./bin/paster serve etc/wsgi/instance.ini 
+ls -l bin/
+cat history.formation |grep develop
+./bin/develop up -v
+./bin/ipython 
+./bin/pyramidpy 
+ls -l etc/
+cat etc/mobyle2.env 
+ls -l
+./p.sh 
+ls -l
+ls src.mrdeveloper/mobyle2.core/src/mobyle2/core/locale/mobyle2.pot 
+vim  src.mrdeveloper/mobyle2.core/src/mobyle2/core/locale/mobyle2.pot 
+./i18n.sh 
+cat ./i18n.sh 
+cat ./src.mrdeveloper/mobyle2.core/src/mobyle2/core/rebuild-i18n.sh
+vim ./src.mrdeveloper/apex/apex/locale/fr/LC_MESSAGES/Apex.mo
+#cat ./src.mrdeveloper/mobyle2.core/src/mobyle2/core/rebuild-i18n.sh
+ls -l
+vim src.mrdeveloper/mobyle2.core/setup.
+vim src.mrdeveloper/mobyle2.core/setup.py 
+ls -l
+history >history.formation 
