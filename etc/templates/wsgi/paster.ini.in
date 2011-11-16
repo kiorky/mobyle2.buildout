@@ -78,6 +78,15 @@ session.cookie_on_exception = true
 # TODO: generate config with the key pair inside the website
 apex.recaptcha_public_key = 6LdxtMkSAAAAAJulw1X4oD7U8zuh9NA9pzrIKAxu
 apex.recaptcha_private_key = 6LdxtMkSAAAAAOZcYEvcCaOrBMwJKqqV5hf4gigZ
+apex.session_secret = CHANGEME
+apex.auth_secret = CHANGEME
+apex.came_from_route = redirect_after_login
+apex.velruse_config = ${buildout:directory}/etc/wsgi/auth.yaml
+apex.use_apex_edit=true
+apex.auth_profile=true
+apex.apex_template = apex:templates/apex_template.pt
+apex.form_template = apex:templates/forms/tableform.pt
+apex.register_form_class=mobyle2.core.forms.RegisterForm
 
 
 pyramid.includes=
@@ -85,18 +94,14 @@ pyramid.includes=
     pyramid_extdirect
 #with_pyramid_zcml
     pyramid_zcml
-# formalchemy
-    pyramid_formalchemy
-    fa.jquery
-
 #with_pyramid_debugtoolbar
     pyramid_debugtoolbar
 
 # various addons pre configurations
 mako.directories=${instance:egg}:templates
 pyramid.debug_all=${instance:debug}
-pyramid.debug_authorization =${instance:debug} 
-pyramid.debug_notfound= ${instance:debug} 
+pyramid.debug_authorization =${instance:debug}
+pyramid.debug_notfound= ${instance:debug}
 pyramid.debug_routematch=${instance:debug}
 pyramid.debug_templates=${instance:debug}
 pyramid.reload_all=${instance:debug}
