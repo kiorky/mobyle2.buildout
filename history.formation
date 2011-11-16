@@ -1,67 +1,20 @@
+
+
+
 cd minitage/
-df -h
 export prefix=$HOME/minitage
-export python=$prefux/tools/python
 export python=$prefix/tools/python
 mkdir -p $python
 cd $python
 wget --no-check-certificate https://github.com/minitage/minitage.shell/raw/master/PyBootstrapper.sh
-bash ./PyBootstrapper.sh $pythona
-alsamixer 
-%
-cd
-cd minitage/
-ls
+bash ./PyBootstrapper.sh $python
 ./tools/python/bin/virtualenv --no-site-packages --distribute ~/minitage/
 . bin/activate
-minimerge -av python-2.6 git-1.
-minimerge -av python-2.6 git-1.7
-. bin/activate
-easy_install -U mintage.core
-easy_install -U minitage.core
 minimerge -s
-minimerge -av python-2.6 git-1.7
-minimerge -av postgresql-9.
-minimerge -av postgresql-8.4
-alsamixer 
-. bin/activatel
-minimerge -av postgresql-8.4
-rm -rf dependencies/postgresql-8.4/
-minimerge -av postgresql-8.4
-ls minilays/dependencies/
-minimerge -av libgif-4.1 
-ls -l
-cd minilays/
-deactivate 
-cd
-cd minitage/
-. bin/activate
-which python
-minimerge --help
-cd minilays/
-ls -l
-ls eggs/
-../dependencies/git-1.7/parts/part/bin/git clone https://kiorky@github.com/mobyle2/mobyle2.minilay.git
-../dependencies/git-1.7/parts/part/bin/git clone https://github.com/mobyle2/mobyle2.minilay.git
-git clone https://kiorky@github.com/mobyle2/mobyle2.minilay.git a
-git clone https://github.com/mobyle2/mobyle2.minilay.git a
-rm -rf a
-../dependencies/git-1.7/parts/part/bin/git clone https://github.com/mobyle2/mobyle2.minilay.git
-ls mobyle2.minilay/
-cat mobyle2.minilay/mobyle2-prod 
-ls ..
-cat dependencies/bzip2-1.0 
-ls ~/minitage/dependencies/bzip2-1.0/
-ls ~/minitage/dependencies/bzip2-1.0/parts/part/
-cat  ~/minitage/dependencies/bzip2-1.0/buildout.cfg 
-vim  ~/minitage/dependencies/bzip2-1.0/buildout.cfg 
-ls ~/minitage/dependencies/bzip2-1.0/
-ls ~/minitage/dependencies/bzip2-1.0/parts/part/
-ls -l
-cat ../dependencies/python-2.6/sys/share/minitage/minitage.env 
-vim  ../dependencies/python-2.6/sys/share/minitage/minitage.env 
-ls -l
-#minimerge -av mobyle2
+git clone https://github.com/mobyle2/mobyle2.minilay.git
+minimerge -av mobyle2
+
+
 ls mobyle2.minilay/
 minimerge -av mobyle2
 minimerge -eav mobyle2
