@@ -12,5 +12,4 @@ etc/init.d/
 etc/mobyle2.env
 etc/wsgi/
 src.mrdeveloper/
-sys/
 tags.python
