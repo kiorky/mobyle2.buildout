@@ -210,4 +210,7 @@ ls -l
 vim src.mrdeveloper/mobyle2.core/setup.
 vim src.mrdeveloper/mobyle2.core/setup.py 
 ls -l
-history >history.formation 
+history >history.formation
+
+#how to access mobyle2 pshell
+bin/paster --plugin=pyramid  pshell etc/wsgi/instance.ini#projectapp 
