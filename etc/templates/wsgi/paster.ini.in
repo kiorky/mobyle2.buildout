@@ -8,11 +8,14 @@ use=egg:Paste#urlmap
 /media/=pmedia
 /=pmain
 /threads/=watch_threads
-/velruse = velruse
+/velruse = pvelruse
 /apex/static = apexapp
 
 [pipeline:pmain]
 pipeline= fvhm exc translogger retry tm projectapp
+
+[pipeline:pvelruse]
+pipeline= fvhm exc translogger retry tm velruse
 
 [pipeline:pmedia]
 pipeline= fvhm translogger exc staticapp
@@ -42,16 +45,64 @@ use=egg:Paste#printdebug
 [filter:exc]
 use=egg:WebError#evalerror
 
+
 [app:velruse]
-use = egg:velruse
-config_file = ${buildout:directory}/etc/wsgi/auth.yaml
-beaker.session.data_dir = ${buildout:directory}/var/tmp/velruse/sdata
-beaker.session.lock_dir = ${buildout:directory}/var/tmp/velruse/slock
-beaker.session.key = velruse
-beaker.session.secret = supersecretformobyle2
-beaker.session.type = cookie
-beaker.session.validate_key = STRONG_KEY_HERE_FOR_MOBYLE2
-beaker.session.cookie_domain = .mobyle2.org
+use=egg:velruse
+# velruse (§OPENID services authentication configuration)
+velruse.store=velruse.store.sqlstore
+velruse.store.url = ${db:scheme}://${db:user}:${db:password}@${db:host}:${db:port}/${db:name}
+velruse.store.echo = ${instance:debug}
+velruse.store.echo_pool = ${instance:debug}
+velruse.store.pool_recycle = 10
+velruse.end_point=http://${instance:host}:${instance:port}/auth/apex_callback
+velruse.providers_hook=mobyle2.core.velruse.velruse_config
+velruse.providers=
+#    velruse.providers.github
+
+# OpenID storage required by:
+# google, yahoo and openid providers
+# velruse.openid.store =
+# velruse.openid.realm =
+
+# Bitbucket
+#velruse.bitbucket.consumer_key =
+#velruse.bitbucket.consumer_secret =
+#velruse.bitbucket.authorize = true
+
+# Facebook
+#velruse.facebook.app_id =
+#velruse.facebook.app_secret =
+#velruse.facebook.scope =
+
+# Github
+# velruse.github.app_id =6108e3a51693bc0f7eb9
+# velruse.github.app_secret = 67b1c8cdc93f306021483de548561907a7b2d355
+# velruse.github.scope =
+
+# Google (also requires OpenID configuration)
+#velruse.google.consumer_key =
+#velruse.google.consumer_secret =
+#velruse.google.oauth_scope =
+
+# LinkedIn
+#velruse.linkedin.consumer_key =
+#velruse.linkedin.consumer_secret =
+#velruse.linkedin.authorize =
+
+# Microsoft Live
+#velruse.live.client_id =
+#velruse.live.client_secret =
+#velruse.live.scope =
+
+# Twitter
+#velruse.twitter.consumer_key =
+#velruse.twitter.consumer_secret =
+#velruse.twitter.authorize =
+
+# Yahoo (also requires OpenID configuration)
+#velruse.yahoo.consumer_key =
+#velruse.yahoo.consumer_secret =
+
 
 [app:projectapp]
 use=egg:${instance:ep}
@@ -63,7 +114,6 @@ sqlalchemy.pool_recycle = 10
 zcmls=
 # indicate here full path to zcmls or
 # relative path inside your egg
-
 
 # beaker
 session.type = file
@@ -81,12 +131,12 @@ apex.recaptcha_private_key = 6LdxtMkSAAAAAOZcYEvcCaOrBMwJKqqV5hf4gigZ
 apex.session_secret = CHANGEME
 apex.auth_secret = CHANGEME
 apex.came_from_route = redirect_after_login
-apex.velruse_config = ${buildout:directory}/etc/wsgi/auth.yaml
 apex.use_apex_edit=true
 apex.auth_profile=true
 apex.apex_template = apex:templates/apex_template.pt
 apex.form_template = apex:templates/forms/tableform.pt
 apex.register_form_class=mobyle2.core.forms.RegisterForm
+apex.velruse_url = http://${hosts:velruse}:${ports:velruse}/velruse
 
 
 pyramid.includes=
