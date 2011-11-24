@@ -245,5 +245,6 @@ format = %(message)s
 use = ${instance:http}
 host=${host}
 port=${port}
+# workers=2
 
 # vim:set et ts=4 sts=4 ft=cfg:
