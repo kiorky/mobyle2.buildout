@@ -1,0 +1,17 @@
+server {
+        root /dev/null;
+        server_name ${reverse_proxy:host};
+        location /${reverse_proxy:mountpoint} {
+#                proxy_set_header "X-VHM-HOST" $scheme://$server_name:$server_port;
+                include "${buildout:directory}/etc/nginx/proxy_params";
+                proxy_pass  http://${hosts:front}:${ports:front}/${reverse_proxy:mountpoint};
+
+        }
+        location /velruse {
+#                proxy_set_header "X-VHM-HOST" $scheme://$server_name:$server_port;
+                include "${buildout:directory}/etc/nginx/proxy_params"; 
+                proxy_pass  http://${hosts:front}:${ports:front}/velruse;
+
+        }     
+        rewrite ^/$  $scheme://$server_name:$server_port/${reverse_proxy:mountpoint} permanent;
+}
