@@ -1,5 +1,6 @@
 server {
         root /dev/null;
+	listen ${reverse_proxy:port};
         server_name ${reverse_proxy:host};
         location /${reverse_proxy:mountpoint} {
 #                proxy_set_header "X-VHM-HOST" $scheme://$server_name:$server_port;
