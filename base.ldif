@@ -1,0 +1,14 @@
+dn: dc=mobyle2,dc=net
+objectClass: dcObject
+objectClass: organization
+dc: mobyle2
+o: Example Corporation
+description: The Example Corporation  
+
+dn: dc=people,dc=mobyle2,dc=net
+objectClass: dcObject
+objectClass: organization
+dc: people
+o: Example Corporation
+description: The Example Corporation 
+
