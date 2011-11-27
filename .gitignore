@@ -1,5 +1,7 @@
 parts
 .installed.cfg
+mpa.cfg
+manage.py
 minilays
 .minitage/
 .mr.developer.cfg
