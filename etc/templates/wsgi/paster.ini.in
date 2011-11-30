@@ -112,6 +112,16 @@ sqlalchemy.echo_pool = ${instance:debug}
 available_languages = fr en
 sqlalchemy.pool_recycle = 10
 zcmls=
+
+
+# see http://docs.pylonsproject.org/projects/pyramid_mailer/en/latest/#configuration
+mail.host=${mail:host}
+mail.port=${mail:port}
+mail.username=${mail:username}
+mail.password=${mail:password}
+mail.default_sender=${mail:sender}
+
+
 # indicate here full path to zcmls or
 # relative path inside your egg
 
@@ -126,8 +136,9 @@ session.cookie_on_exception = true
 # apex configuration
 # recaptacha use localhost as defaualt domain
 # TODO: generate config with the key pair inside the website
-apex.recaptcha_public_key = 6LdxtMkSAAAAAJulw1X4oD7U8zuh9NA9pzrIKAxu
-apex.recaptcha_private_key = 6LdxtMkSAAAAAOZcYEvcCaOrBMwJKqqV5hf4gigZ
+apex.need_mail_verification=true
+apex.recaptcha_public_key = ${mobyle2:recaptcha_key}
+apex.recaptcha_private_key =  ${mobyle2:recaptcha_secret}
 apex.session_secret = CHANGEME
 apex.auth_secret = CHANGEME
 apex.came_from_route = redirect_after_login
@@ -146,6 +157,7 @@ pyramid.includes=
     pyramid_zcml
 #with_pyramid_debugtoolbar
     pyramid_debugtoolbar
+    pyramid_mailer
 
 # various addons pre configurations
 mako.directories=${instance:egg}:templates
