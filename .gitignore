@@ -16,3 +16,5 @@ etc/wsgi/
 src.mrdeveloper/
 tags.python
 etc/nginx/100-mobyle2.reverseproxy.conf
+
+var/

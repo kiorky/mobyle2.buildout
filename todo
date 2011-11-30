@@ -1,0 +1,8 @@
+* gunicorn dont work whereas paste just works fine, make it work 
+        it has a problem with sqlalchemy connection
+[*] display email than login in application
+        mostly done
+* cache apex.libapex.query_velruse_host        
+* utiliser un validateur et un parametre de registry 'only allow email inputed' ave email stocké en session
+  pour les opérations qui demandent à avoir un email en mode 'user hybride'
+
