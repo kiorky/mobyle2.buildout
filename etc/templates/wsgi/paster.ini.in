@@ -42,8 +42,20 @@ logger_name = wsgi
 [filter:debug]
 use=egg:Paste#printdebug
 
+
 [filter:exc]
-use=egg:WebError#evalerror
+use=egg:WebError#${instance:weberror_middleware}
+debug = ${instance:debug}
+error_email = ${instance:errors_to}
+from_address = ${instance:errors_from} 
+;show_exceptions_in_wsgi_errors = true
+smtp_server = ${hosts:smtp}
+;smtp_use_tls = 
+;smtp_username = janitor
+;smtp_password = "janitor's password"
+error_subject_prefix = "mobyle2 Error"
+
+
 
 
 [app:velruse]
