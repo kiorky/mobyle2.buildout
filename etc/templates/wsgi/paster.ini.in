@@ -137,8 +137,8 @@ session.cookie_on_exception = true
 # recaptacha use localhost as defaualt domain
 # TODO: generate config with the key pair inside the website
 apex.need_mail_verification=true
-apex.recaptcha_public_key = ${mobyle2:recaptcha_key}
-apex.recaptcha_private_key =  ${mobyle2:recaptcha_secret}
+# apex.recaptcha_public_key = 
+# apex.recaptcha_private_key =
 apex.session_secret = CHANGEME
 apex.auth_secret = CHANGEME
 apex.came_from_route = redirect_after_login
