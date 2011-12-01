@@ -1,26 +1,19 @@
-dn: dc=mobyle2,dc=net
-objectClass: dcObject
-objectClass: organization
-dc: mobyle2
-o: Example Corporation
-description: The Example Corporation
-
-dn: dc=people,dc=mobyle2,dc=net
+dn: dc=people,dc=mobyle2,dc=rpbs,dc=univ-paris-diderot,dc=fr
 objectClass: dcObject
 objectClass: organization
 dc: people
 o: Example Corporation
 description: The Example Corporation
 
-dn: cn=toto,dc=people,dc=mobyle2,dc=net
+dn: cn=toto,dc=people,dc=mobyle2,dc=rpbs,dc=univ-paris-diderot,dc=fr
 objectClass: posixAccount
 objectClass: top
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
 uidNumber: 1
-gidNumber: 1
 uid: 1
+gidNumber: 1
 homeDirectory: /where
 sn: toto
 cn: toto
