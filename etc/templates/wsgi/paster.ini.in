@@ -44,7 +44,7 @@ use=egg:Paste#printdebug
 
 
 [filter:exc]
-use=egg:WebError#${instance:weberror_middleware}
+use=egg:${instance:weberror_middleware}
 debug = ${instance:debug}
 error_email = ${instance:errors_to}
 from_address = ${instance:errors_from} 
