@@ -157,6 +157,7 @@ apex.auth_secret = CHANGEME
 apex.came_from_route = redirect_after_login
 apex.use_apex_edit=true
 apex.auth_profile=true
+apex.log_logins=true
 apex.apex_template = apex:templates/apex_template.pt
 apex.form_template = apex:templates/forms/tableform.pt
 apex.register_form_class=mobyle2.core.forms.RegisterForm
