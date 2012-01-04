@@ -18,4 +18,3 @@ tags.python
 etc/nginx/100-mobyle2.reverseproxy.conf
 
 var/
-etc/project/mobyle2-kgs.cfg
