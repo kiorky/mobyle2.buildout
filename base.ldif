@@ -25,5 +25,5 @@ homeDirectory: /where
 sn: toto
 cn: toto
 mail: toto@foo.com
-userPassword:: e1NTSEF9MmI1THl6UEI0NTFvTW5SdkMzV1Q4QmJUYlNJL3hwWm9iWDg1TEE9PQ==
+userPassword:: {MD5}9x2+UmKKP4OnerSUgXUlxg==
 
