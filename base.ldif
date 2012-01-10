@@ -25,5 +25,5 @@ homeDirectory: /where
 sn: toto
 cn: toto
 mail: toto@foo.com
-userPassword:: {MD5}9x2+UmKKP4OnerSUgXUlxg==
+userPassword: {MD5}9x2+UmKKP4OnerSUgXUlxg==
 
