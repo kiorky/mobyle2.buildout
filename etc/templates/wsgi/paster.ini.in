@@ -66,7 +66,7 @@ velruse.store.url = ${db:scheme}://${db:user}:${db:password}@${db:host}:${db:por
 velruse.store.echo = ${instance:debug}
 velruse.store.echo_pool = ${instance:debug}
 velruse.store.pool_recycle = 10
-velruse.end_point=http://${instance:host}:${instance:port}/auth/apex_callback
+velruse.endpoint=http://${instance:host}:${instance:port}/auth/apex_callback
 velruse.providers_hook=mobyle2.core.velruse.velruse_config
 velruse.providers=
 #    velruse.providers.github
